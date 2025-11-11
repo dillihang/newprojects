@@ -1,0 +1,13 @@
+Total logs: 12
+INFO: 7 | WARNING: 3 | ERROR: 2
+
+2025-11-11 -> INFO: 7 | ERROR: 2 | WARNING: 3
+
+Most frequent error: Failed to save file: permission denied (1 times)
+
+Top 3 Warning keywords:
+Disk (2)
+space (2)
+low (2)
+
+Report generated on 2025-11-11 10:22:29

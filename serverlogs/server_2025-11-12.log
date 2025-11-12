@@ -1,0 +1,8 @@
+2025-11-12 09:05:12 INFO User Emily logged in
+2025-11-12 09:10:45 WARNING Memory usage high
+2025-11-12 09:15:02 ERROR Failed to send email
+2025-11-12 09:20:17 INFO Scheduled backup started
+2025-11-12 09:25:33 ERROR Unable to connect to database
+2025-11-12 09:30:44 WARNING Disk space running low
+2025-11-12 09:40:55 INFO Backup completed successfully
+2025-11-12 09:45:12 INFO User Emily logged out

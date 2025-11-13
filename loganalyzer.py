@@ -1,9 +1,67 @@
+"""
+Log Analyzer
+
+This module provides tools to read, analyze, visualize, and report server log data.
+
+Features:
+---------
+1. Log Reading & Storage:
+   - Reads `.log` files from a specified folder.
+   - Filters logs based on optional start and end dates.
+   - Stores logs in a structured dictionary by date, time, and event type.
+
+2. Log Searching:
+   - Search logs by date, time, event type (INFO, WARNING, ERROR), or keywords.
+   - Flexible filtering to inspect specific events.
+
+3. Statistics & Insights:
+   - Compute total counts of INFO, WARNING, and ERROR events per day or for a date range.
+   - Identify most frequent errors and top 3 warning keywords.
+   - Generate alerts for high-frequency events (ERROR ≥5, WARNING ≥10).
+
+4. Reporting & Persistence:
+   - Generate textual reports with statistical summaries and insights.
+   - Save analysis results to JSON files for persistence.
+   - Optionally generate daily or trend reports.
+
+5. Visualization:
+   - Bar charts for daily event counts (INFO, WARNING, ERROR).
+   - Line charts showing trends in errors and warnings over time.
+   - Saves visualizations as PNG files in a reports directory.
+
+Usage:
+------
+1. Initialize empty log structures:
+   lines_list = []
+   log_dict = {}
+
+2. Read logs:
+   read_log_file(folder_path, start_date=start, end_date=end)
+
+3. Generate insights:
+   print_statistical_summary_insights(focus_date=some_date)
+   generate_report(focus_date=some_date)
+   save_json(provided_date=some_date)
+
+4. Visualize logs:
+   data_visualizer(provided_date=some_date)
+
+Note:
+-----
+- The `provided_date` parameter allows focusing analysis and visualization on a specific day.
+- For trend line visualizations, all loaded logs are considered.
+- Email alert functionality is currently optional and not implemented.
+
+Author: Dillihang Limbu
+Date: 13/11/2025
+"""
 from datetime import datetime, timedelta, date, time
 from collections import Counter
 from contextlib import redirect_stdout
 import os
 import json
 import glob
+import matplotlib.pyplot as plt
 
 def read_log_file(folder_path: str, start_date: date = None, end_date: date = None):
     for file_path in glob.glob(f"{folder_path}/*.log"):
@@ -135,6 +193,45 @@ def generate_report(focus_date: date = None):
         with redirect_stdout(file):
             print_statistical_summary_insights(focus_date=focus_date)
 
+def data_visualizer(provided_date: date = None):
+    totals_for_bar = []
+    totals_for_line = []
+    event_types = ["INFO", "WARNING", "ERROR"]
+    error_counts =[]
+
+    for days, values in log_dict.items():
+        totals_for_bar.append(get_totals(provided_date=days))
+    
+    if len(totals_for_bar)>0:
+        for items in sorted(totals_for_bar):
+            counts = [items[1], items[2], items[3]]
+            plt.figure(figsize=(10, 6))
+            plt.bar(event_types, counts, color =["green", "orange", "red"])
+            plt.title(items[0])
+            plt.xlabel("Event Type")
+            plt.ylabel("Count")    
+            plt.savefig(f"Newprojects/reports/log_analysis_{items[0].isoformat()}.png")
+            plt.close()
+    
+    for days, values in log_dict.items():
+
+        totals_for_line.append(get_totals())
+
+    if len(totals_for_line)>1:
+        error_counts = [items[3] for items in totals_for_line]
+        warning_counts = [items[2] for items in totals_for_line]
+        days_range = [items[0].strftime("%Y/%m/%d") for items in totals_for_line]
+        plt.plot(days_range, error_counts, marker="o", label="Errors", color="red", linewidth=2)
+        plt.plot(days_range, warning_counts, marker="s", label="Warnings", color="orange", linewidth=2)
+        plt.title("Errors and Warning trends")
+        plt.xlabel("Day")
+        plt.ylabel("Count")
+        plt.legend()
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(f"Newprojects/reports/log_analysis.png")
+        plt.close()            
+
 def save_json(provided_date: date = None):
 
     directory_path = "Newprojects/reports"
@@ -164,6 +261,8 @@ def save_json(provided_date: date = None):
 
     with open(file_path, "w") as json_file:
         json.dump(data, json_file, indent=4)
+    
+    data_visualizer(provided_date=provided_date)
 
 def print_statistical_summary_insights(focus_date: date = None):
     
@@ -293,12 +392,42 @@ if __name__ == "__main__":
     end = date(2025,11,12)
     read_log_file(f_path, start_date=start, end_date=end)
     # print_summary(ev_time=time(8,17,45), warning= "WARNING", keywords="space")
-    date_for_summary = date(2025,11,11)
-    print_statistical_summary_insights(focus_date=date_for_summary)
-    generate_report(focus_date=date_for_summary)
-    save_json(provided_date=date_for_summary)
+    # date_for_summary = date(2025,11,11)
+    # print_statistical_summary_insights(focus_date=date_for_summary)
+    # generate_report(focus_date=date_for_summary)
+    # save_json(provided_date=date_for_summary)
+    data_visualizer()
     
     
     
     
 
+# Potential improvements / minor issues:
+
+# Event alert threshold:
+
+# Right now thresholds are hard-coded (>=5 for errors, >=10 for warnings). Consider making these parameters in event_alert() to make your code more flexible for stage 5 features.
+
+# get_most_error() crash possibility:
+
+# If there are no errors for the selected date, Counter(...).most_common(1)[0] will throw IndexError. You might want to check if errors_str: first and handle empty case with something like ("None", 0).
+
+# lines_list vs focus_date totals:
+
+# In range mode, total_logs = len(lines_list) still counts all logs read in lines_list, not filtered by date range. This is fine if your read_log_file was already filtered, but if you ever read all logs without filtering and call print_statistical_summary_insights(focus_date=...), total_logs will include logs from other dates.
+
+# You already fixed single-day totals correctly. Might want to clarify / rename lines_list or filter it by date if you want perfect consistency.
+
+# Repeated printing of "Top 3 Warning keywords:":
+
+# Both inside get_keywords() (prints once) and then again in print_statistical_summary_insights. The inner print in get_keywords() is redundant if your main function is already printing the heading.
+
+# event_alert(ev_type=None, provided_date=None):
+
+# Works fine now, but the check if event_type is None or event_type == ev_type could be simplified: just pass ev_type and skip None case entirely. Otherwise, if ev_type is None, it will match everything.
+
+# Minor formatting nitpicks:
+
+# "Total logs: {total_logs} from {min_date} to {max_date}" – consider formatting dates for readability.
+
+# Your JSON saves ISO format, which is perfect.

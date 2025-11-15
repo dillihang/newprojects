@@ -74,3 +74,80 @@ By completing this roadmap, you’ll transition from a Python fundamentals learn
 
 ---
 
+
+step 1
+
+# 2. To-Do List Manager (Intermediate OOP)
+# Goal: Manage daily tasks using classes and persistence.
+# Core Skills:
+# - Classes and objects
+# - Reading/writing to JSON
+# - Handling user input
+# - Date/time integration
+
+# 3. Student Grade Analyzer
+# Goal: Analyze student performance from a CSV file.
+# Core Skills:
+# - Parsing structured data (CSV)
+# - Computing averages, highs/lows
+# - Using functions for logic
+# - Error handling (e.g., invalid scores)
+
+# 4. Contact Book (JSON-based)
+# Goal: Create a small personal contact management system.
+# Core Skills:
+# - JSON file storage
+# - Searching and filtering
+# - Adding, updating, deleting records
+# - Functions and loops
+
+# 5. Log Analyzer (Automation Mini-Project)
+# Goal: Process and summarize large log files automatically.
+# Core Skills:
+# - File automation & parsing
+# - String handling and regex
+# - Reporting and summaries
+# - Scripting mindset (DevOps prep)
+
+
+
+Stage 2: Python Automation & Scripting — Exercise Roadmap
+1. File & Folder Automation
+
+Exercise 1: Rename all .txt files in a folder to add a timestamp suffix.
+
+Exercise 2: Move all files of a certain type (e.g., .jpg) into a subfolder called Images.
+
+Exercise 3: Delete empty folders in a given directory recursively.
+
+2. System & OS Interaction
+
+Exercise 4: Write a script to list all running processes (hint: subprocess or psutil).
+
+Exercise 5: Create a backup script: copy a folder and all its contents to a backup location.
+
+Exercise 6: Get system info (OS name, CPU, RAM, disk space) and save to a log file.
+
+3. Data Automation
+
+Exercise 7: Read a CSV, filter rows based on a condition, save to a new CSV.
+
+Exercise 8: Read an Excel file, summarize numeric columns (sum, average), and write a new Excel report.
+
+Exercise 9: Automate text report generation: combine multiple .txt files into one, with headers.
+
+4. Scheduling & Automation
+
+Exercise 10: Write a script that logs a message to a file every minute (for practice; use time.sleep).
+
+Exercise 11: Modify one of your earlier scripts to run automatically using cron (Linux/Mac) or Task Scheduler (Windows).
+
+Exercise 12: Use environment variables to store configuration, e.g., paths or API keys.
+
+5. CLI Tools
+
+Exercise 13: Build a CLI tool to move files of a certain type (argparse)
+
+Exercise 14: Build a CLI tool to summarize a folder’s contents (file counts, sizes).
+
+Exercise 15: Add logging to your CLI tools (timestamped actions, errors).

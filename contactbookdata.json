@@ -1,0 +1,18 @@
+{
+  "Alice Johnson": {
+    "numbers": ["123-456-7890", "222-111-9999"],
+    "address": "123 Maple Street, London"
+  },
+  "Bob Smith": {
+    "numbers": ["555-000-1111"],
+    "address": "44 Baker Street, London"
+  },
+  "Charlie Adams": {
+    "numbers": ["777-888-9999", "010-020-0300"],
+    "address": null
+  },
+  "Diana Perez": {
+    "numbers": [],
+    "address": "Apartment 9C, 12 Riverside Road"
+  }
+}

@@ -1,0 +1,18 @@
+Average per student:
+John Doe: 85.0
+Jane Smith: 91.0
+Bob Johnson: 53.3
+Alice Brown: 76.0
+Charlie Davis: 88.0
+
+Average per subject:
+Math: 76.6
+History: 78.8
+Science: 80.6
+
+Top student is Jane Smith with 91 average
+
+Subject performance summary:
+Math -> min: 45, max: 95, Avg: 76.6
+History -> min: 55, max: 91, Avg: 78.8
+Science -> min: 60, max: 92, Avg: 80.6

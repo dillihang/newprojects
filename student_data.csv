@@ -1,0 +1,16 @@
+student_id,student_name,subject,grade
+101,John Doe,Math,85
+101,John Doe,History,78
+101,John Doe,Science,92
+102,Jane Smith,Math,95
+102,Jane Smith,History,88
+102,Jane Smith,Science,90
+103,Bob Johnson,Math,45
+103,Bob Johnson,History,55
+103,Bob Johnson,Science,60
+104,Alice Brown,Math,70
+104,Alice Brown,History,82
+104,Alice Brown,Science,76
+105,Charlie Davis,Math,88
+105,Charlie Davis,History,91
+105,Charlie Davis,Science,85

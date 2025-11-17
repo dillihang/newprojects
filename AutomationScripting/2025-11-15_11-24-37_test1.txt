@@ -1,0 +1,3 @@
+Python is amazing for automation.
+You can rename files, move them, and even backup folders.
+Learning Python step by step makes complex tasks simple.

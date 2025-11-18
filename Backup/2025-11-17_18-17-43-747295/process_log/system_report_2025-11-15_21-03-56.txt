@@ -1,0 +1,11 @@
+os: Windows
+os_release: 10
+os_version: 10.0.19045
+cpu_arch: AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+username: 44746
+CPU: 16
+C: drive details: ['464.89 GB Total', '411.20 GB Used', '53.69 GB Free']
+D: drive details: ['1863.00 GB Total', '797.38 GB Used', '1065.62 GB Free']
+RAM: ['15.92 GB Total', '1.31 GB Available', '91.8%', '14.61 GB Used', '1.31 GB Free']
+Python Ver: 3.13.7
+timestamp: 2025-11-15 21:03:56

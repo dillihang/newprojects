@@ -1,0 +1,115 @@
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 1.52 GB, Used: 14.39 GB
+
+High memory using services:
+firefox.exe Console 7563.57 MB
+Code.exe Console 847.93 MB
+firefox.exe Console 647.18 MB
+firefox.exe Console 595.20 MB
+Code.exe Console 508.48 MB
+firefox.exe Console 303.89 MB
+MsMpEng.exe Services 218.67 MB
+firefox.exe Console 176.33 MB
+Code.exe Console 130.21 MB
+OmenCommandCenterBackgrou Console 128.33 MB
+Code.exe Console 127.69 MB
+firefox.exe Console 102.66 MB
+explorer.exe Console 99.23 MB
+
+Recorded at: 16-11-2025_19-57-40
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 1.54 GB, Used: 14.38 GB
+
+High memory using services:
+firefox.exe Console 7563.57 MB
+Code.exe Console 847.93 MB
+firefox.exe Console 647.97 MB
+firefox.exe Console 594.36 MB
+Code.exe Console 499.84 MB
+firefox.exe Console 303.34 MB
+MsMpEng.exe Services 219.44 MB
+firefox.exe Console 176.31 MB
+Code.exe Console 130.84 MB
+Code.exe Console 128.81 MB
+OmenCommandCenterBackgrou Console 128.35 MB
+firefox.exe Console 102.69 MB
+explorer.exe Console 99.43 MB
+
+Recorded at: 16-11-2025_19-57-45
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 1.54 GB, Used: 14.38 GB
+
+High memory using services:
+firefox.exe Console 7563.57 MB
+Code.exe Console 847.93 MB
+firefox.exe Console 652.85 MB
+firefox.exe Console 594.50 MB
+Code.exe Console 493.06 MB
+firefox.exe Console 303.19 MB
+MsMpEng.exe Services 220.75 MB
+firefox.exe Console 176.32 MB
+Code.exe Console 130.15 MB
+OmenCommandCenterBackgrou Console 128.82 MB
+Code.exe Console 127.21 MB
+firefox.exe Console 102.71 MB
+explorer.exe Console 99.59 MB
+
+Recorded at: 16-11-2025_19-57-50
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 1.53 GB, Used: 14.39 GB
+
+High memory using services:
+firefox.exe Console 7562.71 MB
+Code.exe Console 847.93 MB
+firefox.exe Console 655.08 MB
+firefox.exe Console 595.33 MB
+Code.exe Console 495.28 MB
+firefox.exe Console 303.24 MB
+MsMpEng.exe Services 220.77 MB
+firefox.exe Console 176.32 MB
+Code.exe Console 130.16 MB
+OmenCommandCenterBackgrou Console 128.33 MB
+Code.exe Console 123.84 MB
+firefox.exe Console 102.79 MB
+explorer.exe Console 99.30 MB
+
+Recorded at: 16-11-2025_19-57-55
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 1.53 GB, Used: 14.38 GB
+
+High memory using services:
+firefox.exe Console 7562.75 MB
+Code.exe Console 847.93 MB
+firefox.exe Console 655.16 MB
+firefox.exe Console 596.39 MB
+Code.exe Console 495.55 MB
+firefox.exe Console 303.68 MB
+MsMpEng.exe Services 220.84 MB
+firefox.exe Console 176.32 MB
+Code.exe Console 130.13 MB
+OmenCommandCenterBackgrou Console 128.35 MB
+Code.exe Console 123.62 MB
+firefox.exe Console 103.04 MB
+explorer.exe Console 99.43 MB
+
+Recorded at: 16-11-2025_19-58-00
+
+

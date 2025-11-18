@@ -43,7 +43,7 @@ def save_output(result: str):
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     file_path = "Newprojects/AutomationScripting/process_log"
     if not os.path.exists(file_path):
-        os.makedirs(file_path, exist_ok=True)
+        os.mkdirs(file_path, exist_ok=True)
     file_name = f"process_log_{timestamp}.txt"
     new_path = os.path.join(file_path, file_name)
 

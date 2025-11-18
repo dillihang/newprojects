@@ -1,0 +1,9 @@
+os_name: nt
+plat_form: ['Windows 10, Ver 10.0.19045, Processor AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD']
+username: 44746
+CPU: 16
+C drive details: ['464.89 GB Total', '411.21 GB Used', '53.69 GB Free']
+D drive details: ['1863.00 GB Total', '797.38 GB Used', '1065.62 GB Free']
+RAM: ['15.92 GB Total', '1.41 GB Available', '91.1%', '14.51 GB Used', '1.41 GB Free']
+Python Ver: 3.13.7
+timestamp: 2025-11-15 20:58:55

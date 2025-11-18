@@ -3,7 +3,15 @@ from pathlib import Path
 from datetime import datetime
 import glob
 from contextlib import redirect_stdout
+from dotenv import load_dotenv
 
+load_dotenv()
+
+source_folder = os.getenv("SOURCE_FOLDER")
+dest_folder = os.getenv("DEST_FOLDER")
+api_key = os.getenv("API_KEY")
+
+print(f"[INFO] Using API key: {api_key}")
 
 def collect_txt_files(folder_path: str):
     """
@@ -65,7 +73,6 @@ if __name__ == "__main__":
     Returns:
         None
     """
-    source = "Newprojects/AutomationScripting"
-    destination = "Newprojects/AutomationScripting"
-    file_list = collect_txt_files(source)
-    generate_report(file_list, destination)
+
+    file_list = collect_txt_files(source_folder)
+    generate_report(file_list, dest_folder)

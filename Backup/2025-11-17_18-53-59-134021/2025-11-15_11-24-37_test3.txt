@@ -1,0 +1,3 @@
+System monitoring can save you headaches.
+Processes, RAM, CPU, and disk space can all be checked programmatically.
+Logging everything helps in debugging and auditing.

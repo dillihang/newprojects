@@ -1,0 +1,8 @@
+Name,Sales,Profit,Quantity
+Alice,1200,300,5
+Bob,900,200,3
+Charlie,1500,450,7
+David,1100,250,4
+Eve,1300,400,6
+Frank,NaN,350,5
+Grace,1250,300,NaN

@@ -1,0 +1,21 @@
+===== 2025-11-15_11-24-37_test1.txt =====
+[EMPTY FILE]
+
+===== 2025-11-15_11-24-37_test2.txt =====
+Data analysis is fun!
+CSV, Excel, and JSON can be manipulated with just a few lines of code.
+Remember to always validate your data before processing.
+
+===== 2025-11-15_11-24-37_test3.txt =====
+System monitoring can save you headaches.
+Processes, RAM, CPU, and disk space can all be checked programmatically.
+Logging everything helps in debugging and auditing.
+
+===== 2025-11-15_11-24-37_test4.txt =====
+Report generation is a useful skill.
+You can combine multiple files, summarize data, or even create dashboards.
+Practice makes perfect!
+
+===== merged_output.txt =====
+[EMPTY FILE]
+

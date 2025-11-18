@@ -1,0 +1,3 @@
+Data analysis is fun!
+CSV, Excel, and JSON can be manipulated with just a few lines of code.
+Remember to always validate your data before processing.

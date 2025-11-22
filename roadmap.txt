@@ -1,5 +1,25 @@
 # 🧭 Python Learning Objectives — Post-MOOC2024 Roadmap
 
+
+Absolutely — that makes perfect sense, and it’s the right way to learn APIs (or any new module).
+From Stage 3 onward, I’ll always give you:
+
+✅ 1. Concept overview
+
+A short explanation of the new topic in simple language.
+
+✅ 2. Micro-examples
+
+Tiny, minimal examples that show how things work before you do the exercise.
+
+✅ 3. Gotchas / pitfalls
+
+Common mistakes beginners make.
+
+✅ 4. Your exercise
+
+Clear instructions + constraints so you learn the right skills.
+
 stages 
 
 ## 1. Core Reinforcement & Good Practices ✅
@@ -146,10 +166,90 @@ Exercise 11: Modify one of your earlier scripts to run automatically using cron 
 
 Exercise 12: Use environment variables to store configuration, e.g., paths or API keys.
 
-5. CLI Tools
+5. CLI Tools✅
 
 Exercise 13: Build a CLI tool to move files of a certain type (argparse)
 
 Exercise 14: Build a CLI tool to summarize a folder’s contents (file counts, sizes).
 
 Exercise 15: Add logging to your CLI tools (timestamped actions, errors).
+
+
+Stage 3: APIs & Web Integration — Exercise Roadmap
+
+1. HTTP & Requests Basics
+------------------------------------------------
+Exercise 16 — Simple GET Request
+- Send a GET request to a public API
+- Print JSON or text response
+- Handle connection errors and timeout
+
+Exercise 17 — Parse JSON from an API
+- Use an API that returns JSON
+- Extract a few fields
+- Print formatted output
+- Handle missing fields
+
+
+2. API Keys & Authentication
+------------------------------------------------
+Exercise 18 — API With an API Key
+- Load API key from environment variables
+- Make a request using `requests`
+- Handle invalid/expired API keys
+
+Exercise 19 — Save API Results to JSON
+- Fetch data from the API
+- Save selected fields to a JSON file
+- Add timestamp
+- Handle file write errors
+
+
+3. Pagination & Rate Limits
+------------------------------------------------
+Exercise 20 — Paginated API Fetcher
+- Use a paginated API (e.g., GitHub)
+- Fetch multiple pages
+- Combine all items
+- Show total count
+- Respect simple rate limits
+
+
+## 4. Building & Using Your Own API
+------------------------------------------------
+Exercise 21 — Build a Simple REST API (Flask or FastAPI)
+- Create `/status` endpoint → returns server status & timestamp
+- Create `/items` endpoint → returns a list of items
+- Create `/items/<id>` endpoint → returns a specific item by ID
+- Handle proper HTTP status codes (200, 404, 400, etc.)
+- Optionally: allow creating (`POST`) and deleting (`DELETE`) items
+
+Exercise 22 — Connect to Your Own API
+- Send GET, POST, DELETE requests to your API using `requests`
+- Parse JSON responses
+- Handle common errors (404, 500, connection issues)
+- Validate data received
+
+## 5. Multi-API Integration (Mini Capstone)
+------------------------------------------------
+Exercise 23 — API Transformer Tool
+- Fetch data from API A (e.g., public API)
+- Process or transform the data (filter, aggregate, modify fields)
+- Send the processed data to API B (your own API from Exercise 21/22)
+- Ensure proper error handling and logging
+
+## 6. Optional Bonus Projects (Not Required)
+------------------------------------------------
+Bonus A — Web Scraper + API Hybrid
+- Scrape data from a website
+- Send scraped data to your API or save as JSON
+- Handle errors and invalid/missing data
+
+Bonus B — Build an API CLI Tool
+- Create a command-line interface for interacting with your API
+- Support multiple endpoints and query options
+
+Bonus C — API Monitoring Dashboard
+- Create a small dashboard (CLI or web)
+- Track API response times, status codes, errors
+- Show alerts if API goes down or slows

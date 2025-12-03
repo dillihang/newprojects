@@ -40,13 +40,13 @@ stages
 ---
 
 ## 3. APIs & Web Integration
-- Understand **HTTP basics** (methods, headers, and status codes).
-- Use the `requests` library to interact with public APIs.
-- Parse and handle JSON data in API responses.
-- Authenticate with tokens or API keys (GitHub, OpenWeather, etc.).
-- Handle pagination, rate limits, and error responses.
-- Build your own small REST API with **Flask** or **FastAPI**.
-- Connect APIs together (e.g., fetch data from one API and send to another).
+- Understand **HTTP basics** (methods, headers, and status codes).✅
+- Use the `requests` library to interact with public APIs.✅
+- Parse and handle JSON data in API responses.✅
+- Authenticate with tokens or API keys (GitHub, OpenWeather, etc.).✅
+- Handle pagination, rate limits, and error responses.✅
+- Build your own small REST API with **Flask** or **FastAPI**.✅
+- Connect APIs together (e.g., fetch data from one API and send to another).✅
 
 ---
 
@@ -253,3 +253,99 @@ Bonus C — API Monitoring Dashboard
 - Create a small dashboard (CLI or web)
 - Track API response times, status codes, errors
 - Show alerts if API goes down or slows
+
+
+# Stage 4: Data Handling & Small Utilities — Exercise Roadmap
+
+## 1. Data Storage & Serialization
+
+Exercise 1: Save API data to JSON
+- Fetch data from any API (or use Stage 3 API results).
+- Save selected fields to a JSON file.
+- Include a timestamp and handle file write errors.
+
+Exercise 2: Load JSON and parse data
+- Read a JSON file.
+- Extract certain fields (e.g., names, IDs).
+- Handle missing fields and invalid JSON.
+
+Exercise 3: Save data to CSV
+- Convert API or JSON data into CSV.
+- Include headers, handle special characters.
+- Handle errors if file cannot be written.
+
+## 2. Data Cleaning & Transformation
+
+Exercise 4: Filter & transform data
+- Read JSON or CSV.
+- Remove invalid entries (e.g., missing fields, empty strings).
+- Transform fields (e.g., uppercase names, calculate string lengths).
+
+Exercise 5: Aggregation and summary
+- Group data by a field (e.g., location or category).
+- Compute totals, averages, or counts.
+- Save results to a new JSON or CSV file.
+
+Exercise 6: Combine multiple sources
+- Merge two or more JSON or CSV files.
+- Deduplicate entries.
+- Handle inconsistent keys or missing fields.
+
+## 3. Small Utility Scripts
+
+Exercise 7: CLI Data Query Tool
+- Use `argparse` or `click`.
+- Accept filters like “location” or “min quantity.”
+- Print matching records from JSON or CSV.
+
+Exercise 8: Batch Data Updater
+- Read data from JSON or CSV.
+- Update certain fields based on rules (e.g., increment quantities, change categories).
+- Save updated data back to the file safely.
+
+Exercise 9: Automated Data Reporter
+- Generate a summary report (JSON, CSV, or TXT) from collected data.
+- Include stats like counts, averages, or top items.
+- Add timestamp and save in a separate reports folder.
+
+## 4. Logging & Error Handling
+
+Exercise 10: Add logging to your scripts
+- Track start/end time, number of items processed, and errors.
+- Log to a file with timestamps.
+
+Exercise 11: Exception handling & retries
+- Wrap API or file operations in try/except.
+- Retry failed requests or operations a few times.
+- Log any failures.
+
+Exercise 12: Config & environment variables
+- Move file paths, API URLs, or filter criteria into a `.env` or `config.json`.
+- Load config dynamically in scripts.
+
+## 5. Mini Project Integration
+
+Exercise 13: Data Fetch → Transform → Store Pipeline
+- Fetch data from Stage 3 API.
+- Transform/clean/aggregate it.
+- Save to JSON and CSV.
+- Print a small summary.
+
+Exercise 14: CLI Data Manager
+- Build a CLI that allows the user to:
+  - List records
+  - Search/filter by field
+  - Update or delete entries
+  - Export results
+
+Exercise 15: Automated Daily Data Workflow
+- Script that:
+  - Fetches data automatically
+  - Cleans & aggregates it
+  - Generates a daily report
+  - Logs the process
+
+💡 Notes:
+- Exercises are cumulative: earlier ones feed into later ones.
+- Emphasize robust error handling and reusable functions.
+- By the end, you should be able to fetch, process, store, and report on any structured data efficiently.

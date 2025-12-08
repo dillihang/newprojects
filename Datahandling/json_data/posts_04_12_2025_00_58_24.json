@@ -1,0 +1,75 @@
+{
+    "timestamp": "2025-12-04T00:58:24.109322",
+    "summary": [
+        {
+            "user": 3,
+            "total_items": 2,
+            "total_content_length": 151,
+            "average_content_length": 75,
+            "most_common_word": [
+                "This",
+                2
+            ]
+        },
+        {
+            "user": 6,
+            "total_items": 2,
+            "total_content_length": 58,
+            "average_content_length": 29,
+            "most_common_word": [
+                "12345This",
+                1
+            ]
+        },
+        {
+            "user": 7,
+            "total_items": 2,
+            "total_content_length": 59,
+            "average_content_length": 29,
+            "most_common_word": [
+                "entry",
+                2
+            ]
+        },
+        {
+            "user": 8,
+            "total_items": 2,
+            "total_content_length": 58,
+            "average_content_length": 29,
+            "most_common_word": [
+                "Everything",
+                1
+            ]
+        },
+        {
+            "user": 5,
+            "total_items": 1,
+            "total_content_length": 26,
+            "average_content_length": 26,
+            "most_common_word": [
+                "Valid",
+                1
+            ]
+        },
+        {
+            "user": 4,
+            "total_items": 1,
+            "total_content_length": 17,
+            "average_content_length": 17,
+            "most_common_word": [
+                "Actual",
+                1
+            ]
+        },
+        {
+            "user": 1,
+            "total_items": 3,
+            "total_content_length": 50,
+            "average_content_length": 16,
+            "most_common_word": [
+                "This",
+                1
+            ]
+        }
+    ]
+}

@@ -50,7 +50,7 @@ stages
 
 ---
 
-## 4. Data Handling & Small Utilities
+## 4. Data Handling & Small Utilities (halt for now)
 - Save API data into CSV, JSON, or SQLite databases.
 - Automate data cleanup and transformation using `pandas`.
 - Build command-line tools with `argparse` or `click`.
@@ -177,7 +177,7 @@ Exercise 15: Add logging to your CLI tools (timestamped actions, errors).
 
 Stage 3: APIs & Web Integration — Exercise Roadmap
 
-1. HTTP & Requests Basics
+1. HTTP & Requests Basics✅
 ------------------------------------------------
 Exercise 16 — Simple GET Request
 - Send a GET request to a public API
@@ -191,7 +191,7 @@ Exercise 17 — Parse JSON from an API
 - Handle missing fields
 
 
-2. API Keys & Authentication
+2. API Keys & Authentication✅
 ------------------------------------------------
 Exercise 18 — API With an API Key
 - Load API key from environment variables
@@ -205,7 +205,7 @@ Exercise 19 — Save API Results to JSON
 - Handle file write errors
 
 
-3. Pagination & Rate Limits
+3. Pagination & Rate Limits✅
 ------------------------------------------------
 Exercise 20 — Paginated API Fetcher
 - Use a paginated API (e.g., GitHub)
@@ -215,7 +215,7 @@ Exercise 20 — Paginated API Fetcher
 - Respect simple rate limits
 
 
-## 4. Building & Using Your Own API
+## 4. Building & Using Your Own API✅
 ------------------------------------------------
 Exercise 21 — Build a Simple REST API (Flask or FastAPI)
 - Create `/status` endpoint → returns server status & timestamp
@@ -224,13 +224,13 @@ Exercise 21 — Build a Simple REST API (Flask or FastAPI)
 - Handle proper HTTP status codes (200, 404, 400, etc.)
 - Optionally: allow creating (`POST`) and deleting (`DELETE`) items
 
-Exercise 22 — Connect to Your Own API
+Exercise 22 — Connect to Your Own API✅
 - Send GET, POST, DELETE requests to your API using `requests`
 - Parse JSON responses
 - Handle common errors (404, 500, connection issues)
 - Validate data received
 
-## 5. Multi-API Integration (Mini Capstone)
+## 5. Multi-API Integration (Mini Capstone)✅
 ------------------------------------------------
 Exercise 23 — API Transformer Tool
 - Fetch data from API A (e.g., public API)
@@ -257,31 +257,31 @@ Bonus C — API Monitoring Dashboard
 
 # Stage 4: Data Handling & Small Utilities — Exercise Roadmap
 
-## 1. Data Storage & Serialization
+## 1. Data Storage & Serialization✅
 
 Exercise 1: Save API data to JSON
 - Fetch data from any API (or use Stage 3 API results).
 - Save selected fields to a JSON file.
 - Include a timestamp and handle file write errors.
 
-Exercise 2: Load JSON and parse data
+Exercise 2: Load JSON and parse data✅
 - Read a JSON file.
 - Extract certain fields (e.g., names, IDs).
 - Handle missing fields and invalid JSON.
 
-Exercise 3: Save data to CSV
+Exercise 3: Save data to CSV✅
 - Convert API or JSON data into CSV.
 - Include headers, handle special characters.
 - Handle errors if file cannot be written.
 
-## 2. Data Cleaning & Transformation
+## 2. Data Cleaning & Transformation✅
 
-Exercise 4: Filter & transform data
+Exercise 4: Filter & transform data✅
 - Read JSON or CSV.
 - Remove invalid entries (e.g., missing fields, empty strings).
 - Transform fields (e.g., uppercase names, calculate string lengths).
 
-Exercise 5: Aggregation and summary
+Exercise 5: Aggregation and summary✅
 - Group data by a field (e.g., location or category).
 - Compute totals, averages, or counts.
 - Save results to a new JSON or CSV file.
@@ -349,3 +349,72 @@ Exercise 15: Automated Daily Data Workflow
 - Exercises are cumulative: earlier ones feed into later ones.
 - Emphasize robust error handling and reusable functions.
 - By the end, you should be able to fetch, process, store, and report on any structured data efficiently.
+
+
+# ----------------------------------------------
+# Stage 5 — DevOps & Cloud Automation
+# Exercise Roadmap
+# ----------------------------------------------
+
+1. Docker Basics
+------------------------------
+Exercise 1 — Build & Run Your First Container
+Exercise 2 — Create a Dockerfile for a Python Script
+Exercise 3 — Use Volumes & Bind Mounts
+Exercise 4 — Build a Multi-Stage Docker Image
+Exercise 5 — Push an Image to Docker Hub
+
+2. Python + Docker SDK Automation
+------------------------------
+Exercise 6 — List Running Containers via Python
+Exercise 7 — Start/Stop Containers with Python
+Exercise 8 — Inspect Container Logs Programmatically
+Exercise 9 — Write a Container Health Checker Script
+
+3. Cloud APIs (AWS / Azure / GCP)
+------------------------------
+Exercise 10 — Make an Authenticated Request to a Cloud API
+Exercise 11 — List Resources (S3 buckets, Azure containers, etc.)
+Exercise 12 — Upload & Download Files via Cloud API
+Exercise 13 — Automate Cleanup: Delete Old Cloud Objects
+
+4. Git & GitHub Automation
+------------------------------
+Exercise 14 — Use GitHub API to List Repos
+Exercise 15 — Create an Issue Automatically from Python
+Exercise 16 — Push a File to GitHub via API
+Exercise 17 — Create a Small GitHub Notifier Script
+
+5. CI/CD & Deployment Automation
+------------------------------
+Exercise 18 — Write a GitHub Actions Workflow
+Exercise 19 — Automate Testing with GitHub Actions
+Exercise 20 — Build & Push Docker Images Automatically
+Exercise 21 — Deploy a Small App via CI/CD (simple pipeline)
+
+6. Remote Server Automation (SSH)
+------------------------------
+Exercise 22 — Connect to a Remote Server via Paramiko
+Exercise 23 — Upload/Download Files via SSH
+Exercise 24 — Run Remote Commands (service status, uptime, logs)
+Exercise 25 — Write a Server Maintenance Automation Script
+
+7. System Monitoring & Log Automation
+------------------------------
+Exercise 26 — Process Monitoring Script (CPU, RAM, Disk)
+Exercise 27 — Log Rotation Utility
+Exercise 28 — Parse & Aggregate System Logs
+Exercise 29 — Build a Simple Monitoring Dashboard (CLI)
+
+8. Mini DevOps Capstone
+------------------------------
+Exercise 30 — Automated Deploy Pipeline
+- Build a Docker image
+- Push to registry
+- Deploy to a server (SSH)
+- Log results
+- Notify via GitHub or console
+
+# ----------------------------------------------
+# End of Stage 5 Roadmap
+# ----------------------------------------------

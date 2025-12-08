@@ -113,3 +113,208 @@ explorer.exe Console 99.43 MB
 Recorded at: 16-11-2025_19-58-00
 
 
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 4.10 GB, Used: 11.81 GB
+
+High memory using services:
+LeagueClient.exe Console 1121.02 MB
+firefox.exe Console 774.05 MB
+RiotClientServices.exe Console 751.57 MB
+Code.exe Console 714.40 MB
+firefox.exe Console 396.05 MB
+MsMpEng.exe Services 369.45 MB
+firefox.exe Console 350.05 MB
+LeagueClientUxRender.exe Console 342.36 MB
+firefox.exe Console 322.23 MB
+Code.exe Console 302.19 MB
+Code.exe Console 251.89 MB
+steamwebhelper.exe Console 245.18 MB
+firefox.exe Console 204.66 MB
+OmenCommandCenterBackgrou Console 181.96 MB
+explorer.exe Console 169.32 MB
+Overwolf.exe Console 169.00 MB
+PhoneExperienceHost.exe Console 151.42 MB
+firefox.exe Console 145.47 MB
+steamwebhelper.exe Console 141.27 MB
+Code.exe Console 137.64 MB
+Code.exe Console 136.12 MB
+Code.exe Console 126.21 MB
+Code.exe Console 125.78 MB
+LeagueClientUxRender.exe Console 120.50 MB
+Code.exe Console 119.73 MB
+firefox.exe Console 117.86 MB
+msedgewebview2.exe Console 117.51 MB
+Code.exe Console 116.41 MB
+SearchApp.exe Console 109.69 MB
+Code.exe Console 105.33 MB
+vgc.exe Services 105.29 MB
+
+Recorded at: 05-12-2025_20-19-56
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 4.09 GB, Used: 11.82 GB
+
+High memory using services:
+LeagueClient.exe Console 1121.02 MB
+firefox.exe Console 773.91 MB
+RiotClientServices.exe Console 751.57 MB
+Code.exe Console 717.12 MB
+firefox.exe Console 396.03 MB
+MsMpEng.exe Services 370.16 MB
+firefox.exe Console 349.93 MB
+LeagueClientUxRender.exe Console 347.69 MB
+firefox.exe Console 323.13 MB
+Code.exe Console 301.96 MB
+Code.exe Console 251.99 MB
+steamwebhelper.exe Console 245.15 MB
+firefox.exe Console 204.64 MB
+OmenCommandCenterBackgrou Console 181.95 MB
+explorer.exe Console 169.36 MB
+Overwolf.exe Console 169.02 MB
+PhoneExperienceHost.exe Console 151.42 MB
+firefox.exe Console 145.49 MB
+steamwebhelper.exe Console 141.27 MB
+Code.exe Console 137.65 MB
+Code.exe Console 136.32 MB
+Code.exe Console 126.51 MB
+Code.exe Console 125.81 MB
+LeagueClientUxRender.exe Console 120.49 MB
+Code.exe Console 120.40 MB
+firefox.exe Console 117.86 MB
+msedgewebview2.exe Console 117.51 MB
+Code.exe Console 116.70 MB
+SearchApp.exe Console 109.69 MB
+Code.exe Console 105.34 MB
+vgc.exe Services 105.31 MB
+
+Recorded at: 05-12-2025_20-20-01
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 4.09 GB, Used: 11.82 GB
+
+High memory using services:
+LeagueClient.exe Console 1121.02 MB
+firefox.exe Console 773.93 MB
+RiotClientServices.exe Console 751.57 MB
+Code.exe Console 716.69 MB
+firefox.exe Console 396.03 MB
+MsMpEng.exe Services 370.34 MB
+firefox.exe Console 349.93 MB
+LeagueClientUxRender.exe Console 343.25 MB
+firefox.exe Console 323.85 MB
+Code.exe Console 299.82 MB
+Code.exe Console 252.04 MB
+steamwebhelper.exe Console 245.15 MB
+firefox.exe Console 204.64 MB
+OmenCommandCenterBackgrou Console 181.96 MB
+explorer.exe Console 169.31 MB
+Overwolf.exe Console 169.00 MB
+PhoneExperienceHost.exe Console 151.42 MB
+firefox.exe Console 145.50 MB
+steamwebhelper.exe Console 141.27 MB
+Code.exe Console 137.65 MB
+Code.exe Console 136.28 MB
+Code.exe Console 126.51 MB
+Code.exe Console 125.88 MB
+Code.exe Console 120.62 MB
+LeagueClientUxRender.exe Console 120.50 MB
+firefox.exe Console 117.86 MB
+msedgewebview2.exe Console 117.51 MB
+Code.exe Console 116.89 MB
+SearchApp.exe Console 109.69 MB
+Code.exe Console 105.34 MB
+vgc.exe Services 104.96 MB
+
+Recorded at: 05-12-2025_20-20-06
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 4.08 GB, Used: 11.83 GB
+
+High memory using services:
+LeagueClient.exe Console 1121.04 MB
+firefox.exe Console 773.86 MB
+RiotClientServices.exe Console 751.57 MB
+Code.exe Console 716.69 MB
+firefox.exe Console 396.09 MB
+MsMpEng.exe Services 351.77 MB
+firefox.exe Console 349.93 MB
+LeagueClientUxRender.exe Console 346.20 MB
+firefox.exe Console 324.60 MB
+Code.exe Console 298.73 MB
+Code.exe Console 252.30 MB
+steamwebhelper.exe Console 245.18 MB
+firefox.exe Console 204.64 MB
+OmenCommandCenterBackgrou Console 181.96 MB
+explorer.exe Console 169.28 MB
+Overwolf.exe Console 169.07 MB
+PhoneExperienceHost.exe Console 151.42 MB
+firefox.exe Console 145.51 MB
+steamwebhelper.exe Console 141.27 MB
+Code.exe Console 137.65 MB
+Code.exe Console 136.30 MB
+Code.exe Console 126.51 MB
+Code.exe Console 125.90 MB
+LeagueClientUxRender.exe Console 120.49 MB
+Code.exe Console 119.47 MB
+firefox.exe Console 117.86 MB
+msedgewebview2.exe Console 117.51 MB
+Code.exe Console 117.09 MB
+SearchApp.exe Console 109.69 MB
+Code.exe Console 105.34 MB
+vgc.exe Services 104.95 MB
+
+Recorded at: 05-12-2025_20-20-11
+
+
+===== MEMORY SNAPSHOT =====
+
+memory_INFO
+Total: 15.92 GB, Available: 4.07 GB, Used: 11.85 GB
+
+High memory using services:
+LeagueClient.exe Console 1121.04 MB
+firefox.exe Console 773.83 MB
+RiotClientServices.exe Console 751.57 MB
+Code.exe Console 716.92 MB
+firefox.exe Console 396.09 MB
+MsMpEng.exe Services 355.70 MB
+firefox.exe Console 349.93 MB
+LeagueClientUxRender.exe Console 343.81 MB
+firefox.exe Console 325.28 MB
+Code.exe Console 306.16 MB
+Code.exe Console 253.68 MB
+steamwebhelper.exe Console 245.18 MB
+firefox.exe Console 204.64 MB
+OmenCommandCenterBackgrou Console 181.96 MB
+explorer.exe Console 169.87 MB
+Overwolf.exe Console 169.05 MB
+PhoneExperienceHost.exe Console 151.41 MB
+firefox.exe Console 145.52 MB
+steamwebhelper.exe Console 141.27 MB
+Code.exe Console 137.66 MB
+Code.exe Console 136.20 MB
+Code.exe Console 126.50 MB
+Code.exe Console 126.05 MB
+Code.exe Console 124.31 MB
+LeagueClientUxRender.exe Console 120.51 MB
+firefox.exe Console 117.86 MB
+msedgewebview2.exe Console 117.50 MB
+Code.exe Console 117.31 MB
+SearchApp.exe Console 109.69 MB
+Code.exe Console 105.36 MB
+vgc.exe Services 104.95 MB
+
+Recorded at: 05-12-2025_20-20-16
+
+

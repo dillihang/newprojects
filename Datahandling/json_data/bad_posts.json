@@ -1,0 +1,38 @@
+[
+    {"user": 1, "title": "Hello World", "content": "This is a valid post."},
+    {"user": 1, "title": "Another Post", "content": "Short content."},
+    {"user": 1, "title": "Small Update", "content": "More text here."},
+
+    {"user": 2, "title": "", "content": "Missing title here."},
+    {"user": 2, "title": "   ", "content": "Whitespace title."},
+    {"user": 2, "title": "Valid Title", "content": "  "},
+
+    {"user": 3, "content": "No title at all."},
+    {"user": 3, "title": "Full Entry", "content": "This is a complete valid post."},
+    {"user": 3, "title": "Another Entry", "content": "This is another valid post with longer content than usual so that you have more variety to test your length calculations."},
+
+    {"user": 4, "title": "Valid Post", "content": ""},
+    {"user": 4, "title": "Another Valid Post", "content": "Actual text here."},
+
+    {
+        "user": 5,
+        "title": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "content": "Title too long"
+    },
+    {"user": 5, "title": "Acceptable Title", "content": "Valid content for testing."},
+
+    {"user": 6, "title": "Numeric Content", "content": "12345"},
+    {"user": 6, "title": "Longer Content Now", "content": "This content is slightly longer for testing purposes."},
+
+    {"title": "Missing user", "content": "No user id here"},
+
+    {"user": 7, "title": "   ", "content": "Title is only spaces"},
+    {"user": 7, "title": "Working Title", "content": "Clean entry for user 7."},
+    {"user": 7, "title": "Second Working Title", "content": "Another valid entry for user 7 here."},
+
+    {"user": 8, "title": "Valid Entry", "content": "Everything is fine."},
+    {"user": 8, "title": "Extra Entry", "content": "Extra content for aggregation exercise."},
+
+    {"user": -9, "title": "Invalid User", "content": "Negative user ID."},
+    {"user": "10", "title": "String User ID", "content": "Should be skipped as well."}
+]

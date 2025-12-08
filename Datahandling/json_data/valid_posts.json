@@ -1,0 +1,80 @@
+[
+    {
+        "user": 1,
+        "title": "HELLO WORLD",
+        "content": "This is a valid post.",
+        "content_length": 21
+    },
+    {
+        "user": 1,
+        "title": "ANOTHER POST",
+        "content": "Short content.",
+        "content_length": 14
+    },
+    {
+        "user": 1,
+        "title": "SMALL UPDATE",
+        "content": "More text here.",
+        "content_length": 15
+    },
+    {
+        "user": 3,
+        "title": "FULL ENTRY",
+        "content": "This is a complete valid post.",
+        "content_length": 30
+    },
+    {
+        "user": 3,
+        "title": "ANOTHER ENTRY",
+        "content": "This is another valid post with longer content than usual so that you have more variety to test your length calculations.",
+        "content_length": 121
+    },
+    {
+        "user": 4,
+        "title": "ANOTHER VALID POST",
+        "content": "Actual text here.",
+        "content_length": 17
+    },
+    {
+        "user": 5,
+        "title": "ACCEPTABLE TITLE",
+        "content": "Valid content for testing.",
+        "content_length": 26
+    },
+    {
+        "user": 6,
+        "title": "NUMERIC CONTENT",
+        "content": "12345",
+        "content_length": 5
+    },
+    {
+        "user": 6,
+        "title": "LONGER CONTENT NOW",
+        "content": "This content is slightly longer for testing purposes.",
+        "content_length": 53
+    },
+    {
+        "user": 7,
+        "title": "WORKING TITLE",
+        "content": "Clean entry for user 7.",
+        "content_length": 23
+    },
+    {
+        "user": 7,
+        "title": "SECOND WORKING TITLE",
+        "content": "Another valid entry for user 7 here.",
+        "content_length": 36
+    },
+    {
+        "user": 8,
+        "title": "VALID ENTRY",
+        "content": "Everything is fine.",
+        "content_length": 19
+    },
+    {
+        "user": 8,
+        "title": "EXTRA ENTRY",
+        "content": "Extra content for aggregation exercise.",
+        "content_length": 39
+    }
+]

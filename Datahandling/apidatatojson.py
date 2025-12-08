@@ -2,6 +2,7 @@ import json
 from datetime import datetime
 import requests
 import os
+import csv
 
 def get_api(url: str):
     """
@@ -125,11 +126,16 @@ def write_to_json(parsed_data: list, skipped_data: list, output_path: str):
     
     dict_timestamp = datetime.now().isoformat()
 
-    new_dict = {
-        "timestamp": dict_timestamp,
-        "data": parsed_data,
-        "skipped_data": skipped_data if skipped_data else None
-    }
+    if isinstance(parsed_data, dict) and "timestamp" in parsed_data:
+    
+        new_dict = parsed_data
+    else:
+
+        new_dict = {
+            "timestamp": dict_timestamp,
+            "data": parsed_data,  # This will be your list
+            "skipped_data": skipped_data if skipped_data else None
+        }
 
     try:
         os.makedirs(output_path, exist_ok=True)
@@ -138,7 +144,7 @@ def write_to_json(parsed_data: list, skipped_data: list, output_path: str):
         return
 
     timestamp = datetime.today().strftime("%d_%m_%Y_%H_%M_%S")
-    file_name=f"posts{timestamp}.json"
+    file_name=f"posts_{timestamp}.json"
     final_output = os.path.join(output_path, file_name)
     
     try:
@@ -155,8 +161,74 @@ def write_to_json(parsed_data: list, skipped_data: list, output_path: str):
         print(f"JSON serialization error: {e}")
         return
 
+def write_to_csv(parsed_data: list, skipped_data: list, output_path: str):
+    """
+    Save processed data to a timestamped CSV file.
+    
+    Creates a CSV file with parsed data and a separate log for skipped items.
+    Files are saved with format: posts_DD_MM_YYYY_HH_MM_SS.csv and skipped_log_DD_MM_YYYY_HH_MM_SS.log
+    
+    Args:
+        parsed_data (list): Valid data items to save
+        skipped_data (list): Skipped/invalid items with reasons
+        output_path (str): Directory path where files will be saved
+        
+    Returns:
+        None: Prints success/error messages to console
+        
+    Raises:
+        OSError: If directory creation fails
+        IOError: If file writing fails  
+        PermissionError: If file permissions insufficient
+        
+    Example:
+        >>> write_to_csv(parsed, skipped, "output/data")
+        Successfully wrote to output/data/posts_03_12_2025_14_30_45.csv
+        100 data written and 5 data skipped
+    """
+    if not parsed_data:
+        print("No data to write")
+        return
+    
+    try:
+        os.makedirs(output_path, exist_ok=True)
+    except OSError as e:
+        print(f"[ERROR] Could not create directory {output_path}: {e}")
+        return
+    
+    timestamp = datetime.today().strftime("%d_%m_%Y_%H_%M_%S")
+    file_name=f"posts_{timestamp}.csv"
+    final_output = os.path.join(output_path, file_name)
+
+    if skipped_data:
+        skippedfile_name=f"skipped_log_{timestamp}.log"
+        skipped_output = os.path.join(output_path, skippedfile_name)
+
+        try:
+            with open(skipped_output, "w", encoding="utf-8") as file:
+                for item in skipped_data:
+                    file.write(str(item)+"\n")
+
+            print(f"Skipped log created: {skipped_output}")
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+
+    try:
+        with open(final_output, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["user", "title", "content"])
+            writer.writeheader()
+            writer.writerows(parsed_data)
+        print(f"Sucessfully wrote to {final_output}")
+        print(f"{len(parsed_data)} data written and {len(skipped_data)} data skipped")
+    except PermissionError:
+        print(f"Permission denied: Cannot write to {final_output}")
+    except IOError as e:
+        print(f"File error: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+    return 
 
 if __name__=="__main__":
 
     parsed_data, skipped_data = process_data("https://jsonplaceholder.typicode.com/posts")
-    write_to_json(parsed_data, skipped_data, output_path="Newprojects/Datahandling/json_data")
+    write_to_csv(parsed_data, skipped_data, output_path="Newprojects/Datahandling/csv_data")

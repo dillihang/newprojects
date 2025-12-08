@@ -3,6 +3,26 @@ import random
 import string
 
 def api_get(url: str, timeout: int = 5):
+    """
+    Fetch data from a REST API endpoint with comprehensive error handling.
+    
+    Args:
+        url (str): The complete URL to fetch data from
+        timeout (int): Request timeout in seconds (default: 5)
+        
+    Returns:
+        tuple: (data, response) where:
+            data (dict/list): Parsed JSON data if successful, None otherwise
+            response (requests.Response): Raw HTTP response object for debugging
+            
+    Raises:
+        Prints error messages but doesn't raise exceptions to allow graceful failure
+        
+    Example:
+        >>> data, response = api_get("https://api.example.com/data")
+        >>> if data:
+        >>>     print(f"Got {len(data)} items")
+    """
     try:
         response = requests.get(url, timeout=timeout)
         response.raise_for_status()
@@ -27,12 +47,50 @@ def api_get(url: str, timeout: int = 5):
     return None, None
 
 def user_id_to_location(user_id):
+    """
+    Convert a numeric user ID to a warehouse location code.
+    
+    Generates a random letter (A-Z) combined with the user_id number.
+    Note: This creates non-deterministic locations for the same user_id.
+    
+    Args:
+        user_id (int): Numeric user identifier
+        
+    Returns:
+        str: Location code in format "L#" where L is random letter, # is user_id
+        
+    Example:
+        >>> user_id_to_location(5)  # Could return "A5", "B5", "Z5", etc.
+        "C5"
+    """
     location_letters = string.ascii_uppercase
     location_id = user_id
     return f"{random.choice(location_letters)}{location_id}"
 
 def get_data(url: str):
-
+    """
+    Extract and transform data from an API endpoint.
+    
+    Fetches data from the URL, validates required fields, and prepares it
+    for loading into the inventory system. Invalid items are logged separately.
+    
+    Args:
+        url (str): API endpoint to fetch data from
+        
+    Returns:
+        tuple: (data_list, skipped_list) where:
+            data_list (list): List of tuples (location, name, quantity) for valid items
+            skipped_list (list): List of dictionaries with invalid items and reasons
+            
+    Validation Rules:
+        - userId, title, and body fields must not be None
+        - Title must be 100 characters or less
+        - Quantity is calculated as length of body content
+        
+    Example:
+        >>> data, skipped = get_data("https://jsonplaceholder.typicode.com/posts")
+        >>> print(f"Valid: {len(data)}, Skipped: {len(skipped)}")
+    """
     data_list = []
     skipped_list = []
 
@@ -74,6 +132,35 @@ def get_data(url: str):
     return data_list, skipped_list
         
 def post_data_to_API(from_url: str, send_url: str):
+    """
+    ETL pipeline: Extract from source API, Transform, Load to target API.
+    
+    Orchestrates the complete data pipeline:
+    1. Extract data from source API
+    2. Transform and validate data
+    3. Load valid data to target inventory API
+    
+    Args:
+        from_url (str): Source API URL to extract data from
+        send_url (str): Target API URL to post data to
+        
+    Returns:
+        None: Prints summary statistics to console
+        
+    Output:
+        - Success/Failure counts for posted items
+        - List of skipped items with reasons
+        - Detailed error messages for failed posts
+        
+    Example:
+        >>> post_data_to_API(
+        >>>     "https://jsonplaceholder.typicode.com/posts",
+        >>>     "http://localhost:5000/inventory"
+        >>> )
+        ✅ Posted apple to A1
+        ❌ Failed: 400 - Invalid location format
+        📊 Summary: 90 posted, 10 failed, 0 skipped
+    """
     data_to_post, skipped_list = get_data(from_url)
 
     success_count = 0

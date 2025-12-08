@@ -1,0 +1,6 @@
+[
+  {"id": 3, "user": 12, "title": "Merge me", "content": "C (updated)"},
+  {"id": "4", "user_id": 13, "headline": "Hi", "body": "D"},
+  {"id": 5, "user": 14, "title": "", "content": "Missing title"},
+  {"uid": 6, "title": "No user field", "content": "Ignored"}
+]

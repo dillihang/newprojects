@@ -1,0 +1,1 @@
+print("Hello from multi-stage build!")

@@ -351,70 +351,66 @@ Exercise 15: Automated Daily Data Workflow
 - By the end, you should be able to fetch, process, store, and report on any structured data efficiently.
 
 
-# ----------------------------------------------
-# Stage 5 — DevOps & Cloud Automation
-# Exercise Roadmap
-# ----------------------------------------------
-
 1. Docker Basics
 ------------------------------
-Exercise 1 — Build & Run Your First Container
-Exercise 2 — Create a Dockerfile for a Python Script
-Exercise 3 — Use Volumes & Bind Mounts
-Exercise 4 — Build a Multi-Stage Docker Image
-Exercise 5 — Push an Image to Docker Hub
+Exercise 1 — Build & Run Your First Container  
+Exercise 2 — Create a Dockerfile for a Python Script  
+Exercise 3 — Use Volumes & Bind Mounts  
+Exercise 4 — Build a Multi-Stage Docker Image  
+Exercise 5 — Push an Image to Docker Hub  
 
 2. Python + Docker SDK Automation
 ------------------------------
-Exercise 6 — List Running Containers via Python
-Exercise 7 — Start/Stop Containers with Python
-Exercise 8 — Inspect Container Logs Programmatically
-Exercise 9 — Write a Container Health Checker Script
+Exercise 6 — List Running Containers via Python  
+Exercise 7 — Start/Stop Containers with Python  
+Exercise 8 — Inspect Container Logs Programmatically  
+Exercise 9 — Write a Container Health Checker Script  
+
+# ⚡ New Bridging Exercise (Networking)
+Exercise 9b — Basic Docker Networking (connect 2 containers)
+
+Exercise 10 — Container Stats Live Monitor (Interactive CLI)  
 
 3. Cloud APIs (AWS / Azure / GCP)
 ------------------------------
-Exercise 10 — Make an Authenticated Request to a Cloud API
-Exercise 11 — List Resources (S3 buckets, Azure containers, etc.)
-Exercise 12 — Upload & Download Files via Cloud API
-Exercise 13 — Automate Cleanup: Delete Old Cloud Objects
+Exercise 11 — Make an Authenticated Request to a Cloud API  
+Exercise 12 — List Resources (S3 buckets, Azure containers, etc.)  
+Exercise 13 — Upload & Download Files via Cloud API  
+Exercise 14 — Automate Cleanup: Delete Old Cloud Objects  
 
 4. Git & GitHub Automation
 ------------------------------
-Exercise 14 — Use GitHub API to List Repos
-Exercise 15 — Create an Issue Automatically from Python
-Exercise 16 — Push a File to GitHub via API
-Exercise 17 — Create a Small GitHub Notifier Script
+Exercise 15 — Use GitHub API to List Repos  
+Exercise 16 — Create an Issue Automatically from Python  
+Exercise 17 — Push a File to GitHub via API  
+Exercise 18 — Create a Small GitHub Notifier Script  
 
 5. CI/CD & Deployment Automation
 ------------------------------
-Exercise 18 — Write a GitHub Actions Workflow
-Exercise 19 — Automate Testing with GitHub Actions
-Exercise 20 — Build & Push Docker Images Automatically
-Exercise 21 — Deploy a Small App via CI/CD (simple pipeline)
+Exercise 19 — Write a GitHub Actions Workflow  
+Exercise 20 — Automate Testing with GitHub Actions  
+Exercise 21 — Build & Push Docker Images Automatically  
+Exercise 22 — Deploy a Small App via CI/CD (simple pipeline)  
 
 6. Remote Server Automation (SSH)
 ------------------------------
-Exercise 22 — Connect to a Remote Server via Paramiko
-Exercise 23 — Upload/Download Files via SSH
-Exercise 24 — Run Remote Commands (service status, uptime, logs)
-Exercise 25 — Write a Server Maintenance Automation Script
+Exercise 23 — Connect to a Remote Server via Paramiko  
+Exercise 24 — Upload/Download Files via SSH  
+Exercise 25 — Run Remote Commands (service status, uptime, logs)  
+Exercise 26 — Write a Server Maintenance Automation Script  
 
 7. System Monitoring & Log Automation
 ------------------------------
-Exercise 26 — Process Monitoring Script (CPU, RAM, Disk)
-Exercise 27 — Log Rotation Utility
-Exercise 28 — Parse & Aggregate System Logs
-Exercise 29 — Build a Simple Monitoring Dashboard (CLI)
+Exercise 27 — Process Monitoring Script (CPU, RAM, Disk)  
+Exercise 28 — Log Rotation Utility  
+Exercise 29 — Parse & Aggregate System Logs  
+Exercise 30 — Build a Simple Monitoring Dashboard (CLI)  
 
 8. Mini DevOps Capstone
 ------------------------------
-Exercise 30 — Automated Deploy Pipeline
-- Build a Docker image
-- Push to registry
-- Deploy to a server (SSH)
-- Log results
-- Notify via GitHub or console
-
-# ----------------------------------------------
-# End of Stage 5 Roadmap
-# ----------------------------------------------
+Exercise 31 — Automated Deploy Pipeline  
+  - Build a Docker image  
+  - Push to registry  
+  - Deploy to a server (SSH)  
+  - Log results  
+  - Notify via GitHub or console  

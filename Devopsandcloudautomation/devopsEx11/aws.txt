@@ -1,0 +1,112 @@
+"""
+AWS Services Cheat Sheet for DevOps
+==================================
+
+1️⃣ S3 (Simple Storage Service)
+-------------------------------
+# Type: Object storage
+# Purpose: Store artifacts, backups, static files
+# Key Features:
+# - Buckets: containers for objects
+# - Objects: files inside buckets
+# - Versioning: keep previous versions
+# - Lifecycle policies: auto-delete old objects
+# DevOps Use Cases:
+# - Store build artifacts
+# - Backup storage
+# - CI/CD: upload build outputs for deployment
+
+2️⃣ EC2 (Elastic Compute Cloud)
+-------------------------------
+# Type: Virtual servers
+# Purpose: Run apps, CI/CD agents, or scripts
+# Key Features:
+# - AMIs: preconfigured images
+# - Security groups: firewalls
+# - Key pairs: SSH access
+# - Auto Scaling: scale based on load
+# DevOps Use Cases:
+# - Deploy apps or microservices
+# - Run CI/CD agents
+# - Test scripts in production-like environments
+
+3️⃣ Lambda
+----------
+# Type: Serverless compute
+# Purpose: Event-driven automation
+# Key Features:
+# - Trigger from S3, API Gateway, CloudWatch
+# - Pay only for execution time
+# DevOps Use Cases:
+# - Auto-trigger builds/tests on file uploads
+# - Cleanup scripts
+# - Notifications or alerts
+
+4️⃣ CloudFormation / CDK
+------------------------
+# Type: Infrastructure as Code (IaC)
+# Purpose: Automate environment setup
+# Key Features:
+# - Templates describe resources
+# - Supports rollback
+# DevOps Use Cases:
+# - Automate environment provisioning
+# - Version infrastructure
+
+5️⃣ CloudWatch
+--------------
+# Type: Monitoring & Logging
+# Purpose: Monitor metrics, collect logs
+# Key Features:
+# - Alarms: trigger notifications/actions
+# - Dashboards: visualize metrics
+# - Log groups/streams: centralized logs
+# DevOps Use Cases:
+# - Alert when service is down
+# - Log analysis for troubleshooting
+
+6️⃣ IAM (Identity & Access Management)
+--------------------------------------
+# Type: Security & access control
+# Purpose: Manage users, roles, permissions
+# Key Features:
+# - Users, groups, roles, policies
+# - Temporary credentials for scripts
+# DevOps Use Cases:
+# - Secure deployment scripts
+# - Ensure least-privilege access
+
+7️⃣ ECR (Elastic Container Registry)
+------------------------------------
+# Type: Container registry
+# Purpose: Store Docker images
+# DevOps Use Cases:
+# - Push images from CI pipeline
+# - Pull images for deployment
+
+8️⃣ ECS / EKS (Container Services)
+----------------------------------
+# Type: Container orchestration
+# ECS: AWS-managed cluster
+# EKS: Kubernetes on AWS
+# DevOps Use Cases:
+# - Deploy microservices
+# - Automate scaling & updates
+
+9️⃣ API Gateway
+---------------
+# Type: API management
+# Purpose: Trigger Lambdas or EC2 endpoints
+# DevOps Use Cases:
+# - Build internal APIs for automation
+# - Event-driven workflows
+
+Flow Example in DevOps:
+-----------------------
+# 1. Code Commit → CI/CD triggers
+# 2. Build & Test → Docker build → Push to ECR
+# 3. Deploy → EC2/ECS/EKS
+# 4. Artifacts → Store in S3
+# 5. Monitoring → CloudWatch + Alarms
+# 6. Automation → Lambda + API Gateway
+"""

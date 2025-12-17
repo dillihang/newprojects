@@ -68,6 +68,19 @@ stages
 - Use `paramiko` or `fabric` for remote server scripting (SSH automation).
 - Read logs, monitor processes, and generate system reports automatically.
 
+## Stage 5B — Real Cloud Infrastructure Automation
+=================================================
+
+Purpose:
+Apply existing automation patterns to real cloud infrastructure
+(AWS-first, transferable to other providers).
+
+Prerequisites:
+- Completed Exercises 1–31
+- Comfortable with APIs, error handling, pagination
+- GitHub automation (Ex 15–18)
+- SSH automation (Ex 23–26)
+
 ---
 
 ## 6. Advanced Topics (Optional / Long-Term)
@@ -414,3 +427,135 @@ Exercise 31 — Automated Deploy Pipeline
   - Deploy to a server (SSH)  
   - Log results  
   - Notify via GitHub or console  
+
+
+
+stage 5b. exercise road map
+
+Cloud Infrastructure Automation (AWS / Real Infra)
+-----------------------------------------------------
+
+Exercise 32 — Cloud Credentials & Safety Setup
+- Configure AWS credentials securely
+- Verify identity using STS (GetCallerIdentity)
+- Implement:
+  - dry_run flag
+  - explicit region handling
+- Goal: Safe authenticated cloud access
+
+
+Exercise 33 — EC2 Inventory Script
+- List all EC2 instances
+- Extract:
+  - instance ID
+  - name tag
+  - state
+  - launch time
+  - instance type
+- Output a clean summary table
+- Goal: Cloud resource discovery
+
+
+Exercise 34 — EC2 Idle Instance Detector
+- Detect instances that are:
+  - stopped OR
+  - running but older than N days
+- Group results:
+  - stopped
+  - idle
+  - active
+- Optional:
+  - terminate only if dry_run=False
+- Goal: Cost & hygiene automation
+
+
+Exercise 35 — IAM User Hygiene Checker
+- List IAM users
+- Detect:
+  - users with no login in last N days
+  - access keys unused for N days
+- Produce a grouped notification summary
+- Goal: Security hygiene automation
+
+
+Exercise 36 — S3 Compliance Scanner
+- Scan all S3 buckets
+- Detect:
+  - public access
+  - missing encryption
+  - old objects (> N days)
+- Group findings by bucket
+- Goal: Policy & compliance automation
+
+
+Exercise 37 — CloudWatch Log Alert Script
+- Fetch recent log streams
+- Search for:
+  - ERROR
+  - EXCEPTION
+  - FAILED
+- Aggregate counts per service
+- Goal: Log intelligence automation
+
+
+Exercise 38 — Cloud Resource Notifier (Unified)
+- Combine alerts from:
+  - EC2
+  - IAM
+  - S3
+- Group notifications by severity
+- Optional:
+  - write report to file
+- Goal: Centralized cloud monitoring
+
+
+10. Kubernetes Automation (Optional)
+------------------------------------
+
+Exercise 39 — Kubernetes Cluster Inventory
+- List:
+  - namespaces
+  - pods
+  - nodes
+- Detect unused namespaces
+- Goal: Cluster visibility
+
+
+Exercise 40 — Kubernetes Cleanup (Dry-Run)
+- Identify:
+  - idle namespaces
+  - crashed pods
+- Perform dry-run deletes only
+- Goal: Safe cluster automation
+
+
+11. Cloud Backup & Reliability Automation
+-----------------------------------------
+
+Exercise 41 — Snapshot Automation Script
+- Create EC2 snapshots
+- Rotate old snapshots
+- Log actions taken
+- Goal: Backup lifecycle automation
+
+
+Exercise 42 — Infrastructure Audit Report
+- Generate report covering:
+  - EC2
+  - IAM
+  - S3
+- Export as JSON or CSV
+- Goal: Audit-ready automation
+
+
+12. Stage 5 Final Capstone
+-------------------------
+
+Exercise 43 — Cloud Operations Bot (Capstone)
+- End-to-end system:
+  - inventory
+  - detection
+  - notification
+  - dry-run fixes
+- Modular, config-driven design
+- Goal: Production-grade cloud automation

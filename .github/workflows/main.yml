@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run automation script
-        run: python Newprojects/Devopsandcloudautomation/devopsEx15/githubapitolistrepos.python
+        run: python Newprojects/Devopsandcloudautomation/devopsEx15/githubapitolistrepos.py
 
       - name: Success
         run: echo "Workflow executed successfully"

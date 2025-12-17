@@ -52,7 +52,7 @@ def check_response():
         - Network and timeout errors
     """
     headers = get_token()
-    print(headers)
+   
 
     if not headers:
         print(f"[ERROR] No header data")

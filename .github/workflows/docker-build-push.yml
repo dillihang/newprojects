@@ -26,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          dockerfile: Devopsandcloudautomation/devopsEx21/Dockerfile
+          file: Devopsandcloudautomation/devopsEx21/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/my-exercise-container:python-automation

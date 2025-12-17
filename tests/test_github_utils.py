@@ -14,10 +14,9 @@ def test_get_file_content_func():
 
     result = get_file_content(temp_path)
 
-    expected = base64.b64encode(b"test content. this is just for test").decode()
+    expected = base64.b64encode(f"test content. this is just for test").decode()
 
     assert result == expected
-
 
 
 if __name__=="__main__":

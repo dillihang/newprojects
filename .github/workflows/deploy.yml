@@ -23,12 +23,8 @@ jobs:
           script: |
             echo "SSH connection successful!"
             whoami
-            docker --version  # Also check if Docker is available
+            docker --version
 
-      - name: Deploy to server via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/my-exercise-container:python-automation
             docker stop python-automation || true
             docker rm python-automation || true

@@ -21,11 +21,17 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            echo "SSH connection successful!"
+            whoami
+            docker --version  # Also check if Docker is available
+
+      - name: Deploy to server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/my-exercise-container:python-automation
             docker stop python-automation || true
             docker rm python-automation || true
             docker run -d \
               --name python-automation \
               ${{ secrets.DOCKER_USERNAME }}/my-exercise-container:python-automation
-              echo "SSH connection successful!"
-              whoami

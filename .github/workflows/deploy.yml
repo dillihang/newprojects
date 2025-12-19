@@ -30,4 +30,5 @@ jobs:
             docker rm python-automation || true
             docker run -d \
               --name python-automation \
+              -e GIT_TOKEN="${{ secrets.GIT_TOKEN }}" \
               ${{ secrets.DOCKER_USERNAME }}/my-exercise-container:python-automation

@@ -27,3 +27,5 @@ jobs:
             docker run -d \
               --name python-automation \
               ${{ secrets.DOCKER_USERNAME }}/my-exercise-container:python-automation
+              echo "SSH connection successful!"
+              whoami

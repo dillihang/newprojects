@@ -1,24 +1,52 @@
 # 🧭 Python Learning Objectives — Post-MOOC2024 Roadmap
 
 
-Absolutely — that makes perfect sense, and it’s the right way to learn APIs (or any new module).
-From Stage 3 onward, I’ll always give you:
+From now on, every exercise will include:
 
-✅ 1. Concept overview
+1. Concept overview
+Plain-language explanation of the idea, not the code.
 
-A short explanation of the new topic in simple language.
+2. Micro-examples
+Tiny, minimal examples to show the pattern in isolation.
 
-✅ 2. Micro-examples
+3. Gotchas / pitfalls
+Where people usually lock themselves into verbose / rigid designs.
 
-Tiny, minimal examples that show how things work before you do the exercise.
+4. Your exercise
+With constraints that force you to think in systems, not scripts.
 
-✅ 3. Gotchas / pitfalls
+This is now part of how I’ll teach you. 👍
 
-Common mistakes beginners make.
+A mental model to keep forever (save this)
 
-✅ 4. Your exercise
+When you’re designing automation, always ask:
 
-Clear instructions + constraints so you learn the right skills.
+“Am I writing instructions, or am I building an executor?”
+
+If you’re repeating:
+
+connect
+
+run command
+
+check result
+
+print
+
+stop or continue
+
+👉 You probably want an executor, not another helper function
+
+When teaching or reviewing my code:
+- Prefer abstraction over repetition
+- Show me execution patterns (generic runners, action pipelines, handlers)
+- Explain the *thinking shift*, not just the refactor
+- Keep solutions simple but scalable
+- Use the structure:
+  1. Concept overview
+  2. Micro-examples
+  3. Gotchas
+  4. Exercise
 
 stages 
 

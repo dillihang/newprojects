@@ -110,61 +110,63 @@ def run_deploy():
             "verify": f"docker logs {container_name}"
                 }   
     
-    # Pull Docker image
-    out, err, code = connectviaparamiko.run_remote_command(client, commands["pull_image"])
-    print("[STEP] Pulling docker image...")
-    if code == 0:
-        print(f"OUTPUT:\n", out)
-        print("[SUCCESS] Image pulled\n")
-    else:
-        print(f"[ERRORS]:\n, {err}\n[EXITCODE]: {code}\n")
-        return
-    
-    # Check if container exists
-    out, err, code = connectviaparamiko.run_remote_command(client, commands["find_container"])
-    print(f"[STEP] finding existing container {container_name}...")
-    if code == 0:
-        print("container exists, starting stop and delete process\n")
-        print(f"[STEP] Stopping old container")
-
-        # Stop old container
-        out, err, code = connectviaparamiko.run_remote_command(client, commands["stop_container"])
+    try:
+        # Pull Docker image
+        out, err, code = connectviaparamiko.run_remote_command(client, commands["pull_image"])
+        print("[STEP] Pulling docker image...")
         if code == 0:
             print(f"OUTPUT:\n", out)
-            print("[SUCCESS] old container stopped\n")
+            print("[SUCCESS] Image pulled\n")
         else:
             print(f"[ERRORS]:\n, {err}\n[EXITCODE]: {code}\n")
             return
         
-        # Remove old container
-        print(f"[STEP] Removing old container...")
-        out, err, code = connectviaparamiko.run_remote_command(client, commands["remove_container"])
+        # Check if container exists
+        out, err, code = connectviaparamiko.run_remote_command(client, commands["find_container"])
+        print(f"[STEP] finding existing container {container_name}...")
         if code == 0:
-            print(f"OUTPUT:\n", out)
-            print("[SUCCESS] old container removed\n")
+            print("container exists, starting stop and delete process\n")
+            print(f"[STEP] Stopping old container")
+
+            # Stop old container
+            out, err, code = connectviaparamiko.run_remote_command(client, commands["stop_container"])
+            if code == 0:
+                print(f"OUTPUT:\n", out)
+                print("[SUCCESS] old container stopped\n")
+            else:
+                print(f"[ERRORS]:\n, {err}\n[EXITCODE]: {code}\n")
+                return
+            
+            # Remove old container
+            print(f"[STEP] Removing old container...")
+            out, err, code = connectviaparamiko.run_remote_command(client, commands["remove_container"])
+            if code == 0:
+                print(f"OUTPUT:\n", out)
+                print("[SUCCESS] old container removed\n")
+            else:
+                print(f"[ERRORS]:\n, {err}\n[EXITCODE]: {code}\n")
+                return
+            
+            if not run_container(client=client, cmd=commands["run_container"], container_name=container_name):
+                return
+            
+            if not check_logs(client=client, cmd=commands["verify"], container_name=container_name):
+                return
+
+        elif code == 1:
+            print(f"{container_name} does not exist...\n")
+
+            if not run_container(client=client, cmd=commands["run_container"], container_name=container_name):
+                return
+            
+            if not check_logs(client=client, cmd=commands["verify"], container_name=container_name):
+                return
+
         else:
             print(f"[ERRORS]:\n, {err}\n[EXITCODE]: {code}\n")
             return
-        
-        if not run_container(client=client, cmd=commands["run_container"], container_name=container_name):
-            return
-        
-        if not check_logs(client=client, cmd=commands["verify"], container_name=container_name):
-            return
-
-    elif code == 1:
-        print(f"{container_name} does not exist...\n")
-
-        if not run_container(client=client, cmd=commands["run_container"], container_name=container_name):
-            return
-        
-        if not check_logs(client=client, cmd=commands["verify"], container_name=container_name):
-            return
-
-    else:
-        print(f"[ERRORS]:\n, {err}\n[EXITCODE]: {code}\n")
-        return
-    
+    finally:
+        client.close()
 
 if __name__=="__main__":
 

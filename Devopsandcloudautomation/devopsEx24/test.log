@@ -1,0 +1,79 @@
+[15/Jan/2024:10:30:00 +0000] 127.0.0.1 - - "GET /api/data HTTP/1.1" 500 1234 "-" "Mozilla/5.0" ERROR processing request: libgpg-error0 dependency issue
+2024-01-15T10:30:01.123Z WARN [thread-12] Disk space at 85% - consider cleanup
+10:30:02 user:root CMD: /usr/bin/fail2ban-client status
+Failed to connect to database at jdbc:mysql://localhost:3306
+[FAILURE] Deployment aborted due to missing environment variables
+[FATAL] Kernel panic - not syncing: VFS: Unable to mount root fs
+CRITICAL: Could not allocate memory for buffer pool
+ALERT: RAID array degradation detected (disk 3 SMART errors)
+SEVERE: javax.servlet.ServletException: java.lang.NullPointerException
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 22
+panic: runtime error: invalid memory address or nil pointer dereference
+EMERGENCY: Power failure detected, switching to UPS
+[emerg] 1#1: bind() to 0.0.0.0:80 failed (98: Address already in use)
+Stacktrace:
+  File "app.py", line 42, in <module>
+    main()
+Traceback (most recent call last):
+  File "script.py", line 17, in <module>
+    result = 1/0
+TimeoutError: [Errno 110] Connection timed out
+DEADLOCK: transaction (Process ID 52) was deadlocked on lock resources
+segfault at 0x7f8e3c456780 ip 00007f8e3c456780 sp 00007ffd1234abcd
+OutOfMemoryError: Java heap space
+NullPointerException at com.example.App.process(App.java:123)
+Assertion failed: (x != NULL), function process_data, file data.c, line 45.
+Validation error: Email address 'user@' is invalid
+Authentication failed for user 'admin' from IP 192.168.1.100
+Authorization denied: User 'guest' attempted to access /admin
+Connection refused: mysql://localhost:3306 (111: Connection refused)
+Request refused due to rate limiting (429 Too Many Requests)
+Broken pipe: client disconnected during file upload
+Corrupted zip file: CRC32 mismatch
+Missing required configuration file: /etc/app/config.yaml
+Invalid API key: 'sk_live_1234567890abcdef'
+Illegal instruction (core dumped)
+Unexpected token '}' in JSON at position 42
+Unhandled promise rejection: TypeError: Cannot read property 'name' of undefined
+Uncaught SyntaxError: Unexpected identifier
+Unsupported protocol version: 3.2 (expected 4.0)
+Deprecated function 'oldMethod()' called - use 'newMethod()' instead
+Abort trap: 6
+Terminated by signal 9 (SIGKILL)
+Shutdown initiated by user
+Crash report generated: /var/crash/app.12345.crash
+Detected hang in thread pool worker-3 (10 seconds)
+Process stalled at 95% completion for 300 seconds
+Potential memory leak detected: heap usage 1.2GB and growing
+Buffer overflow detected in strcpy() - truncating
+Buffer underflow in audio decoder - inserting silence
+Version mismatch: Client 2.1.0, Server 2.0.0
+Conflict: Update failed due to concurrent modification
+Duplicate entry 'john@example.com' for key 'email'
+Expired certificate: www.example.com (expired 2023-12-31)
+Request rejected: Invalid CSRF token
+Access denied for user 'anonymous'
+Blocked IP: 10.0.0.1 (too many failed login attempts)
+Dropped packet: ICMP flood protection
+Discarded malformed frame from 00:11:22:33:44:55
+Skipped 23 records due to parsing errors
+Ignored unknown parameter 'debug_mode=true'
+Malformed JSON received: {"name": "test" missing comma
+Constraint violation: FOREIGN KEY constraint fails
+Rollback transaction: Could not insert into orders table
+Deadlock victim: Process ID 73 chosen as deadlock victim
+Timeout waiting for lock (30 seconds exceeded)
+HTTP 500 Internal Server Error
+HTTP 404 Not Found
+HTTP 403 Forbidden
+HTTP 401 Unauthorized
+Security breach detected: Multiple failed admin login attempts
+Possible intrusion attempt: Port scanning from 203.0.113.1
+Attack detected: SQL injection attempt
+Exploit attempt: CVE-2021-44228 (Log4Shell)
+Vulnerability found: SSL/TLS weak cipher suite enabled
+Pod evicted due to node pressure
+Container OOMKilled: memory limit exceeded
+Unhealthy: 3/5 replicas available
+Container restarting (back-off 10s)
+Backoff restarting failed container

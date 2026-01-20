@@ -48,6 +48,34 @@ When teaching or reviewing my code:
   3. Gotchas
   4. Exercise
 
+
+1️⃣ Concept overview
+
+Plain-language explanation of what automation pattern you’re exploring, why it matters, and what the executor/adapter mental model is doing.
+
+2️⃣ Micro-examples
+
+Tiny, minimal examples to show the pattern in isolation — e.g., how to call boto3.client("ec2") and dynamically call a method using getattr and **kwargs.
+
+3️⃣ Gotchas / pitfalls
+
+Where learners usually get trapped:
+
+assuming the executor knows every AWS method
+
+hardcoding service-specific logic instead of designing adapters
+
+thinking kwargs magically validates parameters
+
+4️⃣ Your exercise
+
+Concrete task with constraints, plus hints about which modules/methods you can use, what to explore, and how kwargs or other patterns will help. Not the full solution — just the roadmap to explore.
+
+Mental model reminder (forever)
+
+“Am I writing instructions, or am I building an executor?”
+If you’re repeating: connect → run → check → print → stop/continue → think executor.
+
 stages 
 
 ## 1. Core Reinforcement & Good Practices ✅
